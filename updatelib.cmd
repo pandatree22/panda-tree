@@ -1,0 +1,1 @@
+ cp ..\machine-code-simulator\target\machine-code-simulator-1.0.jar ./lib
