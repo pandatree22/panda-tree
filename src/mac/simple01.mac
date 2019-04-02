@@ -1,9 +1,10 @@
-0010 1010 LOAD_AI  ; Load 10 into reg A
-0010 1110 STORE_A  ; Store reg A to addr 14
-1001 0000 SHIFTL   ; Shift reg A left 4 bits
-0010 1111 STORE_A  ; Store reg A to addr 15
-0100 1110 LOAD_B   ; Load addr 14 into Reg B
-0110 1001 SUB      ; subtract B from A and result in A
-1101 1001 JUMP_NEG ; When A is negative, jump line 9
-1100 0101 JUMP     ; Jump to line 6
-1111 0000 HALT     ; Stop
+; Instructions in Assembler
+LOAD_AI 1010     ; Load a 4 bit value 1010 into Register A
+STORE_A 1110     ; Write register A into RAM location 14
+SHIFT_AI 1010    ; Shift Register A 4 bits then add another 4 bit value 1010
+STORE_A 1111     ; Write register A into RAM location 15
+LOAD_B 1110      ; Read RAM location 14 into Register B
+SUB 0100         ; Subtract two registers, store to second register.
+JUMP_NEG 1000    ; Jump program if A register negative to RAM location 8.
+JUMP 0101        ; Jump program to RAM location 5.
+HALT 0000        ; Stop program.
